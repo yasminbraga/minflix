@@ -26,11 +26,12 @@ a {
   color: inherit;
 }
 
-#root {
-  min-height: calc(100vh - var(--bodyPaddingTop));
-  display: flex;
-  flex-direction: column;
+
+body {
+  --bodyPaddingTop: 94px;
+  padding-top: var(--bodyPaddingTop);
 }
+
 @media (max-width: 800px) {
   .Menu {
     height: 40px;
@@ -40,4 +41,10 @@ a {
     --bodyPaddingTop: 40px;
     padding-top: var(--bodyPaddingTop);
   }
+}
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
 }
